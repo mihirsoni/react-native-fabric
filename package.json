@@ -1,35 +1,29 @@
 {
-  "name": "react-native-android-speech",
-  "version": "0.0.5",
-  "description": "This is simple module for React Native for Android Text to Speech Engine",
+  "name": "react-native-fabric",
+  "version": "0.0.1",
+  "description": "React Native Module for Fabric Ansers",
   "main": "index.android.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mihirsoni/react-native-android-speech.git"
+    "url": "git+https://github.com/mihirsoni/react-native-fabric.git"
   },
   "keywords": [
-	"react-native",
-	"react-component",
     "React",
     "Native",
-    "Android",
-    "TTS",
-    "Text",
-    "To",
-    "speech"
+    "Fabric",
+    "Crashlytics",
+    "Answers"
   ],
-  "peerDependencies": {
-    "react-native": ">=0.12"
-  },
-  "author": "Mihir Soni <mihirsoni.123@gmail.com> (http://mihir.pro)",
+  "author": [
+    {"Mihir Soni <mihirsoni.123@gmail.com> (http://mihir.pro)"}
+    {"Ravi Vagadia <ravirdv@gmail.com> (http://ravi.ws)"}
+  ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mihirsoni/react-native-android-speech/issues"
+    "url": "https://github.com/mihirsoni/react-native-fabric/issues"
   },
-  "homepage": "https://github.com/mihirsoni/react-native-android-speech#readme",
-  "_shasum": "3373398dc0134b00da79961c6d5b09b068ef85c6",
-  "_from": "react-native-android-speech@*"
+  "homepage": "https://github.com/mihirsoni/react-native-fabric#readme"
 }
