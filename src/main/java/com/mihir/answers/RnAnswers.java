@@ -34,7 +34,7 @@ public class RnAnswers extends ReactContextBaseJavaModule {
                     custom.putCustomAttribute(key,args.getDouble(key));
                     break;
                 case String :
-                    custom.putCustomAttribute(key,args.getDouble(key));
+                    custom.putCustomAttribute(key,args.getString(key));
                     break;
                 case Null:
                     break;
@@ -50,6 +50,26 @@ public class RnAnswers extends ReactContextBaseJavaModule {
         newView.putContentId(args.getString("contentId"));
         newView.putContentName(args.getString("contentName"));
         newView.putContentType(args.getString("contentType"));
+        if(args.hasKey("customAttributes")){
+            ReadableMap customAttributes = args.getMap("attributes");
+            ReadableMapKeySeyIterator  iterator = customAttributes.keySetIterator();
+            while(iterator.hasNextKey()){
+                String key = iterator.nextKey();
+                ReadableType valType = args.getType(key);
+                switch (valType){
+                    case Number:
+                        newView.putCustomAttribute(key,args.getDouble(key));
+                        break;
+                    case String :
+                        newView.putCustomAttribute(key,args.getString(key));
+                        break;
+                    case Null:
+                        break;
+                    default:
+                        throw new IllegalArgumentException("Please provide valid attributes");
+                }
+            }
+        }
         Answers.getInstance().logContentView(newView);
     }
 }
